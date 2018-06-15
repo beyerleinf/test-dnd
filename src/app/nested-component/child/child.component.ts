@@ -1,4 +1,4 @@
-import {Component, ComponentFactoryResolver, EventEmitter, Input, OnInit, Output, ViewChild, ViewContainerRef} from '@angular/core';
+import {Component, ComponentFactoryResolver, EventEmitter, Input, OnChanges, OnInit, Output, ViewChild, ViewContainerRef} from '@angular/core';
 
 import {IncidentsComponent} from '../incidents/incidents.component';
 import {QaComponent} from '../qa/qa.component';
@@ -9,7 +9,7 @@ import {TodoComponent} from '../todo/todo.component';
   templateUrl: './child.component.html',
   styleUrls: ['./child.component.css']
 })
-export class ChildComponent implements OnInit {
+export class ChildComponent implements OnInit, OnChanges {
   @Input() widgetType: string|any;
 
   @Input() properties = {};
@@ -31,6 +31,12 @@ export class ChildComponent implements OnInit {
 
   ngOnInit() {
     this.resolveComponentType(this.widgetType);
+  }
+
+  ngOnChanges(changes) {
+    if (this.widgetRef && changes['properties']) {
+      this.resolveComponentType(this.widgetType);
+    }
   }
 
   private resolveComponentType(widgetType: string): void {
