@@ -1,0 +1,5 @@
+<section class="grid" dnd-sortable-container [sortableData]="widgets">
+  <app-child *ngFor="let widget of widgets; index as wI" dnd-sortable [sortableIndex]="wI" [dragData]="{widget:widget}" (onDropSuccess)="dragSuccess($event)"
+    (onDragStart)="dragStart($event)" (onDragEnd)="dragEnd($event)" [uuid]="widget.uuid" [widgetType]="widget.widgetType" [properties]="widget.properties">
+  </app-child>
+</section>

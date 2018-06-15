@@ -1,0 +1,25 @@
+:host {
+    display: block;
+    position: absolute;
+    top: 0;
+    padding: 2rem 0.5rem 1rem 0.5rem;
+    height: 100vh;
+    width: 100%;
+    margin-top: 0;
+}
+
+section.grid {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	height: 100%;
+	justify-content: flex-start;
+	align-content: flex-start;
+}
+
+app-child {
+	margin: 1rem;
+	width: calc(33.33333% - 2rem);
+	min-width: 300px;
+	height: auto;
+}
