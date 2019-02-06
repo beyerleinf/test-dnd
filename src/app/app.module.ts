@@ -3,21 +3,34 @@ import {BrowserModule} from '@angular/platform-browser';
 import {DndModule} from '@beyerleinf/ngx-dnd';
 
 import {AppComponent} from './app.component';
-import {ChildComponent} from './nested-component/child/child.component';
-import {IncidentsComponent} from './nested-component/incidents/incidents.component';
-import {ParentComponent} from './nested-component/parent/parent.component';
-import {QaComponent} from './nested-component/qa/qa.component';
-import {TodoComponent} from './nested-component/todo/todo.component';
+import {ChildComponent, IncidentsComponent, ParentComponent, QaComponent, TodoComponent} from './issue-2/';
+import {IssueFourtyfourComponent} from './issue-44';
+import { IssueTwoComponent } from './issue-2/issue-two/issue-two.component';
 
 @NgModule({
   declarations: [
-    AppComponent, ChildComponent, ParentComponent, IncidentsComponent,
-    QaComponent, TodoComponent
+    AppComponent,
+    ChildComponent,
+    ParentComponent,
+    IncidentsComponent,
+    QaComponent,
+    TodoComponent,
+    IssueFourtyfourComponent,
+    IssueTwoComponent,
   ],
-  imports: [BrowserModule, DndModule.forRoot()],
+  imports: [
+    BrowserModule,
+    DndModule.forRoot(),
+  ],
   providers: [],
-  bootstrap: [AppComponent],
-  entryComponents: [IncidentsComponent, QaComponent, TodoComponent]
+  bootstrap: [
+    AppComponent,
+  ],
+  entryComponents: [
+    IncidentsComponent,
+    QaComponent,
+    TodoComponent,
+  ]
 })
 export class AppModule {
 }

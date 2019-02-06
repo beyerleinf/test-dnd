@@ -1,0 +1,1 @@
+export {IssueFourtyfourComponent} from './issue-fourtyfour/issue-fourtyfour.component';
