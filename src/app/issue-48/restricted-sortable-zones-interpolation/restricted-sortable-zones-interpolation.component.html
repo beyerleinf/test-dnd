@@ -1,0 +1,15 @@
+<h1>Solution 1</h1>
+<ng-container *ngFor="let category of categories">
+  <h2>{{category.name}}</h2>
+  <ul dnd-sortable-container [dropZones]="[category.id]" [sortableData]="category.items">
+    <li *ngFor="let item of category.items; let i = index" dnd-sortable [sortableIndex]="i">{{item}}</li>
+  </ul>
+</ng-container>
+
+<h1>Solution 2</h1>
+<ng-container *ngFor="let category of categories">
+  <h2>{{category.name}}</h2>
+  <ul dnd-sortable-container [dropZones]="getZonesForCategory(category)" [sortableData]="category.items">
+    <li *ngFor="let item of category.items; let i = index" dnd-sortable [sortableIndex]="i">{{item}}</li>
+  </ul>
+</ng-container>

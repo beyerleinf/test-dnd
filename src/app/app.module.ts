@@ -3,9 +3,10 @@ import {BrowserModule} from '@angular/platform-browser';
 import {DndModule} from '@beyerleinf/ngx-dnd';
 
 import {AppComponent} from './app.component';
+import {IssueTwoComponent} from './issue-2';
 import {ChildComponent, IncidentsComponent, ParentComponent, QaComponent, TodoComponent} from './issue-2/';
 import {IssueFourtyfourComponent} from './issue-44';
-import { IssueTwoComponent } from './issue-2/issue-two/issue-two.component';
+import {RestrictedSortableZonesInterpolationComponent} from './issue-48';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { IssueTwoComponent } from './issue-2/issue-two/issue-two.component';
     TodoComponent,
     IssueFourtyfourComponent,
     IssueTwoComponent,
+    RestrictedSortableZonesInterpolationComponent,
   ],
   imports: [
     BrowserModule,
