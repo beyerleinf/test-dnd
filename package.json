@@ -21,7 +21,7 @@
     "@angular/platform-browser-dynamic": "^7.2.4",
     "@angular/router": "^7.2.4",
     "@beyerleinf/ngx-dnd": "^6.0.0-preview3",
-    "core-js": "^2.6.3",
+    "core-js": "^2.6.11",
     "rxjs": "^6.4.0",
     "zone.js": "^0.8.29"
   },
